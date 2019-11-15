@@ -1,23 +1,31 @@
 ---
 layout: default
 ---
+<section class="hero">
 
-<h2>{{ page.title }}</h2>
+</section>
 
-  {% include page-intro.html %}
+<section class="home">
+  <div class="home__content container">
+      <h2>{{ page.title }}</h2>
 
-  {{ content }}
+      {% include page-intro.html %}
+    
+      {{ content }}
+    
+      <section>
+    
+        <h3>Recent posts from the blog</h3>
+    
+        <ul>
+          {% for post in site.posts limit:3 %}
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+    
+      </section>
+  </div>
+</section>
 
-  <section>
-
-    <h3>Recent posts from the blog</h3>
-
-    <ul>
-      {% for post in site.posts limit:3 %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-
-  </section>

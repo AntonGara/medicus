@@ -1,11 +1,21 @@
-<header>
+<header class="header">
+  <div class="header__content">
+    <nav class="nav">
+      <a href="{{ site.baseurl }}" class="logo">
+      {% if(site.logo) %}
+        <img src="{{ site.logo }}" alt="" class="logo__img">
+      {% endif %}
+      </a>
+      {% include navigation.html navigation=site.data.navigation %}
+    </nav>
 
-  <h1>
-    <a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-  </h1>
-
-  <nav>
-    {% include navigation.html navigation=site.data.navigation %}
-  </nav>
-
+    <div class="header__bottom">
+      <h5 class="header__info">
+        Адрес: {{ site.adress }}
+      </h5>
+      <h5 class="header__info">
+        Режим работы: {{ site.opening }}
+      </h5>
+    </div>
+  </div>
 </header>
