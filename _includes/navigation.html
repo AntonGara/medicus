@@ -1,7 +1,7 @@
 {% assign navurl = page.url | remove: 'index.html' %}
 
 <ul class="nav__items">
-  {% for item in include.navigation %}
+  {% for item in site.data.navigation.items %}
   <li class="nav__item">
     <a href="{{ item.url }}" class="nav__link">{{ item.text }}</a>
   </li>

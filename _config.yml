@@ -2,12 +2,15 @@ title: medicus.ru
 email: anton.gara@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Some description
+  
 baseurl: "/" # the subpath of your site if applicable, e.g. /blog
 url: "https://medicus.netlify.com" # the base hostname & protocol for your site, e.g. https://example.com
 
 logo: assets/img/logo.png
+
 adress: Пр. Ген. Острякова, 244, корпус 6, помещение 18
 opening: Пн-пт 9.00-19.00 Сб. 9.00-14.00 Воскресенье – выходной
+
 # Permalink format (/blog/ is ignored for pages)
 permalink: /blog/:title
 
