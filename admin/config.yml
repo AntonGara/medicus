@@ -52,7 +52,6 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: Text, name: text, widget: string}
               - {label: Url, name: url, widget: string}
-    files:
       - label: "Block"
         name: "block"
         file: "_data/block.yml"
