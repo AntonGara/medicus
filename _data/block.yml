@@ -1,4 +1,7 @@
-items:
-  - title: Title
-    description: Description
-    image: assets/img/
+Block:
+  - description: Description
+    image: /assets/img/uploads/screenshot-editor.jpg
+    title: Title
+  - description: Description
+    image: /assets/img/uploads/screenshot-editor.jpg
+    title: Title
