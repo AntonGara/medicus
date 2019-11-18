@@ -18,9 +18,23 @@ layout: default
         <h3>Recent posts from the blog</h3>
     
         <ul>
-          {% for post in site.posts limit:3 %}
+          {% for post in site.posts %}
             <li>
               <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+    
+      </section>
+
+      <section>
+    
+        <h3>Recent service from the blog</h3>
+    
+        <ul>
+          {% for service in site.service %}
+            <li>
+              <a href="{{ service.url }}">{{ service.title }}</a>
             </li>
           {% endfor %}
         </ul>
