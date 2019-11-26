@@ -8,9 +8,6 @@ url: "https://medicus.netlify.com" # the base hostname & protocol for your site,
 
 logo: assets/img/logo.png
 
-adress: Пр. Ген. Острякова, 244, корпус 6, помещение 18
-opening: Пн-пт 9.00-19.00 Сб. 9.00-14.00 Воскресенье – выходной
-
 # Permalink format (/blog/ is ignored for pages)
 permalink: /blog/:title
 
@@ -33,15 +30,32 @@ sass:
 compress_html:
   clippings: all
 
+collections:
+  services:
+    output: true
+    permalink: /services/:title
+  specialists:
+    output: true
+    permalink: /specialists/:title
+
 # set some common post defaults
 defaults:
-  -
-    scope:
+  - scope:
       path: "" # an empty string here means all files in the project
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       layout: "post" # set the correct default template for a post
       section: "post" # set the root section name
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: service      
+  - scope:
+      path: ""
+      type: "specialists"
+    values:
+      layout: specialist      
 
 # Build settings
 markdown: kramdown

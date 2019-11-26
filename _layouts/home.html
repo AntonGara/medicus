@@ -6,40 +6,10 @@ layout: default
 </section>
 
 <section class="home">
-  <div class="home__content container">
-      <h2>{{ page.title }}</h2>
-
-      {% include page-intro.html %}
-    
-      {{ content }}
-    
-      <section>
-    
-        <h3>Recent posts from the blog</h3>
-    
-        <ul>
-          {% for post in site.posts %}
-            <li>
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-    
-      </section>
-
-      <section>
-    
-        <h3>Recent service from the blog</h3>
-    
-        <ul>
-          {% for service in site.service %}
-            <li>
-              <a href="{{ service.url }}">{{ service.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-    
-      </section>
-  </div>
+	<div class="home__content container">
+		<h2>{{ page.title }}</h2>
+		
+		{{ content }}
+	</div>
 </section>
 

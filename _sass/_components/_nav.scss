@@ -11,18 +11,13 @@
         margin: 0;
     }
 
-    &__item {
-
-    }
-
     &__link {
-        @include text(15px, 1, 0);
+        @include text(15px, 1);
         color: $text;
         text-decoration: none;
         font-weight: bold;
         padding: 10px 15px;
         border-radius: 3px;
-        transition: .3s;
 
         &:hover {
             color: $white;

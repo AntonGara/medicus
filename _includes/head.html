@@ -4,8 +4,5 @@
   <base href="{{ site.baseurl }}">
   <title>{% if page.section == "home" %}{{ site.title }}{% else %}{{ page.title | default: site.title }}{% endif %}</title>
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  {% if jekyll.environment == 'production' and site.analytics %}
-    {% include analytics.html %}
-  {% endif %}
   <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>

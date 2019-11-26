@@ -1,21 +1,26 @@
 <header class="header">
-  <div class="header__content">
-    <nav class="nav">
-      <a href="{{ site.baseurl }}" class="logo">
-      {% if(site.logo) %}
-        <img src="{{ site.logo }}" alt="" class="logo__img">
-      {% endif %}
-      </a>
-      {% include navigation.html navigation=site.data.navigation %}
-    </nav>
+	<div class="header__content">
+		<nav class="nav">
+			<a href="{{ site.baseurl }}" class="logo">
+			{% if(site.logo) %}
+				<img src="{{ site.logo }}" alt="" class="logo__img">
+			{% else %}
+				{{ site.title }}
+			{% endif %}
+			</a>
 
-    <div class="header__bottom">
-      <h5 class="header__info">
-        Адрес: {{ site.adress }}
-      </h5>
-      <h5 class="header__info">
-        Режим работы: {{ site.opening }}
-      </h5>
-    </div>
-  </div>
+			{% include navigation.html navigation=site.data.navigation %}
+		</nav>
+
+		{% if(site.data.info) %}
+		<div class="header__bottom">
+			{% for item in site.data.info.items %}
+				<p class="header__info">
+					{{ item.text }}
+				</p>
+			{% endfor %}
+		</div>
+		{% endif %}
+		
+	</div>
 </header>

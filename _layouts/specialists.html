@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<section>
+    <div class="container">
+        <h2>{{ page.title }}</h2>
+
+        {{ content }}
+
+        <section>
+
+			<h3>Specialists</h3>
+
+			<ul>
+				{% for spec in site.specialists %}
+				<li>
+					<h4><a href="{{ spec.url }}">{{ spec.title }}</a></h4>
+				</li>
+				{% endfor %}
+			</ul>
+
+        </section>
+    </div> 
+</section>
